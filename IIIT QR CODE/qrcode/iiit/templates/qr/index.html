@@ -1,0 +1,81 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<div class="container">
+  <div class="py-5 text-center">
+    <img class="d-block mx-auto mb-4" src="https://icon-library.net/images/register-icon-png/register-icon-png-10.jpg" alt="" width="150" height="100">
+    <h2>REGISTRATION FORM</h2>
+  </div>
+    </div>
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Enter Your Details</h4>
+      <form class="needs-validation" method="POST" action="{% url 'index' %}">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">First name</label>
+            {{form.firstname}}
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="lastName">Last name</label>
+            {{form.lastname}}
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email">Email</label>
+          {{form.email}}
+          <div class="invalid-feedback">
+            Please enter a valid email address.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="address">Roll No.</label>
+          {{form.scholar}}
+          <div class="invalid-feedback">
+            Please enter your Roll No.
+          </div>
+        </div>
+        <div class="mb-3">
+            <label for="address">Year of Study</label>
+            {{form.year}}
+            <div class="invalid-feedback">
+              Please enter your Year.
+            </div>
+          </div>
+
+        <div class="mb-3">
+            <label for="address">Branch</label>
+            {{form.branch}}
+            <div class="invalid-feedback">
+              Please enter your Branch.
+            </div>
+          </div>
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+        <p id="demo"></p>
+      </form>
+    </div>
+  </div>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">Designed and Maintained By - Milind Raj</p>
+  </footer>
+</div>
