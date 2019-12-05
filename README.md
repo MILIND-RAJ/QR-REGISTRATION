@@ -4,8 +4,8 @@ You will recieve a Successfully registered email after your register on this web
 
 ## Changes To Be Made By the User
 In the setting.py file, Change the following two Below fields with your email id and password of yur email id from which you wand to send confirmation emails to the users who will register.
-
+```
 EMAIL_HOST_USER = 'Your Email Id'
 EMAIL_HOST_PASSWORD = 'Your Email's Password'
-
+```
 
